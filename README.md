@@ -7,15 +7,15 @@ npm安装或者cnpm：
         
 ## 使用 ##
         
-        import LcCity from 'province-selector';
+        import PsCity from 'province-selector';
     
-        var City = new LcCity();    // 创建实例化对象
+        var City = new PsCity();    // 创建实例化对象
         City.show();    // 执行show方法
 ## confirm ##
 回调函数，可以在里面拿到选中的地区
 
-        import LcCity from 'lc-city-selector';
-        var City = new LcCity({
+        import PsCity from 'province-selector';
+        var City = new PsCity({
             confirm: function (data) {
                 console.log(data);  // data就是选中的地区，一个拼接好的字符串
             }
@@ -28,8 +28,8 @@ npm安装或者cnpm：
 ## 数据回填 ##
 如果你已经有了数据，想要回填进去，可以加一个`data`参数，但是要注意它的格式
  
-        import LcCity from 'lc-city-selector';
-        var City = new LcCity({
+        import PsCity from 'province-selector';
+        var City = new PsCity({
             data: {
                 province: ' 广东省',
                 city    : '深圳市',
