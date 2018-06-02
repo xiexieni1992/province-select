@@ -1,6 +1,6 @@
 {
   "name": "province-select",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "省市区选择",
   "main": "./src/lc-city.js",
   "scripts": {
