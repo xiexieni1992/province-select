@@ -1,10 +1,10 @@
 import './lc-city.css'
-import cityData from './data.json'
 import _lc from './util.js'
 
 export default class LcCity {
   constructor(option) {
     this.option = option || {}
+    this.cityData = option.json
     this.el = {} // 存储页面元素
     // 选中的数据
     this.select = {
@@ -136,7 +136,7 @@ export default class LcCity {
   // 获取省份数据
   getDataProvince() {
     var arr = []
-    for (var key in cityData) {
+    for (var key in this.cityData) {
       arr.push(key)
     }
     this.renderProvince(arr)   // 渲染省份
@@ -204,10 +204,10 @@ export default class LcCity {
 
     let arr = []
 
-    for (var key in cityData) {
+    for (var key in this.cityData) {
       if (key === province) {
-        this.ShortData = cityData[key]    // 保存省份下城市的所有数据，选中区域用到
-        for (var key in cityData[key]) {
+        this.ShortData = this.cityData[key]    // 保存省份下城市的所有数据，选中区域用到
+        for (var key in this.cityData[key]) {
           arr.push(key)
         }
         break
