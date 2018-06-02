@@ -4,6 +4,8 @@ import _lc from './util.js'
 export default class LcCity {
   constructor(option) {
     this.option = option || {}
+    this.title = option.tit || '选择地区'
+    this.type = option.type || 'address'
     this.cityData = option.json
     this.el = {} // 存储页面元素
     // 选中的数据
@@ -44,7 +46,7 @@ export default class LcCity {
     let html = `<div class="lc-city-body">
                   <div class="lc-titile">
                     <button class="lc-btn lc-cancel lc_cancel">取消</button>
-                    <h4 class="lc-top-title">选择地区</h4>
+                    <h4 class="lc-top-title">${this.title}</h4>
                     <button class="lc-btn lc-cancel lc_confirm">确定</button>
                   </div>
                   <div class="lc-nav-wrap lc_nav">
@@ -110,13 +112,13 @@ export default class LcCity {
         if (!select[key]) {
           switch (key) {
             case 'province':
-              errMsg = '请选择省份'
+              errMsg = this.type === 'address' ? '请选择省份' : '请选择月份'
               break
             case 'city':
-              errMsg = '请选择城市'
+              errMsg = this.type === 'address' ? '请选择城市' : '请选择天'
               break
             default:
-              errMsg = '请选择地区'
+              errMsg = this.type === 'address' ? '请选择地区' : '请选择时间段'
               break
           }
           this.errorTip(errMsg)
@@ -245,6 +247,9 @@ export default class LcCity {
       val = ''
 
     for (let i = 0, length = aLi.length; i < length; i++) {
+      if (!this.isFill) {
+        _lc.addClass(aLi[0], 'active')
+      }
       aLi[i].addEventListener('click', function() {
         // 先删除所有的class, 再给当前元素添加class
         for (let i = 0, length = aLi.length; i < length; i++) {
@@ -466,10 +471,6 @@ export default class LcCity {
       }
       else if (key === 'district' && data[key]) {
         // select.district = data[key]
-      }
-      else {
-        console.error('请检查你传入的字段是否匹配 ' + key)
-        return
       }
     }
     this.fillProvince()    // 回填省份
