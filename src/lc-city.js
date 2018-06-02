@@ -404,15 +404,15 @@ export default class LcCity {
     }
   }
 
-  // 获取选中的数据，拼接成一个字符串
+  // 获取选中的数据，返回省市区对象
   getSelect() {
-    let select = this.select,
-      str = ''
+    let select = this.select
+    // str = ''
 
-    for (let key in select) {
-      str += select[key] + ' '
-    }
-    return str
+    // for (let key in select) {
+    //   str += select[key] + ' '
+    // }
+    return select
   }
   // 获取选中的数据，直接返回一个对象
   getSelectObj() {

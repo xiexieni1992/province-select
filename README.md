@@ -1,22 +1,13 @@
 ﻿# 省-市-区三级联动城市选择器
-----------
-## 效果 ##
-演示地址：[https://licong96.github.io/demo/lc-city-selector/dist/][1]
-
-![效果][2]
-## 无依赖 ##
-纯js手写，使用简单，不依赖任何插件
+---------
 ## 安装 ##
 npm安装或者cnpm：
 
-        npm install lc-city-selector --save
-yarn安装：
-
-        yarn add lc-city-selector
+        npm install province-selector --save
         
 ## 使用 ##
         
-        import LcCity from 'lc-city-selector';
+        import LcCity from 'province-selector';
     
         var City = new LcCity();    // 创建实例化对象
         City.show();    // 执行show方法
@@ -40,9 +31,9 @@ yarn安装：
         import LcCity from 'lc-city-selector';
         var City = new LcCity({
             data: {
-                province: '江西省',
-                city    : '南昌市',
-                district: '青山湖区',
+                province: ' 广东省',
+                city    : '深圳市',
+                district: '南山区',
             }
         });
         
@@ -60,30 +51,3 @@ yarn安装：
  2. `close()`，关闭选择器
  3. `getSelect()`，获取当前选中的区域，已拼接成了一个字符串
  4. `getSelectObj()`，获取当前选中的区域，返回的是一个对象
-
-## 电脑端需要注意 ##
-虽然样式上已经做了兼容，但是选择器的位置有偏移，所以在电脑上打开需要传入一个元素，我会把元素距离屏幕的位置，赋值给选择器，让选择器和元素凑在一起
-
-        import LcCity from 'lc-city-selector';
-    
-        var City = new LcCity();    // 创建实例化对象
-        
-        // 假设有一个id为input的元素，点击它来打开选择器
-        
-        var oInput =  document.getElementById('input');
-        
-        oInput.addEventListener('click', function() {
-          City.show(this);  // 这里的this指向的是oInput
-        });
-        
-
-
-----------
-
-
-欢迎提出建议和问题，我会第一时间处理，除非我在约会~
-    
-
-
-  [1]: https://licong96.github.io/demo/lc-city-selector/dist/
-  [2]: https://licong96.github.io/image/gif/lc-city-selector.gif
