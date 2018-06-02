@@ -1,4 +1,5 @@
 import LcCity from './src/lc-city.js'
+// var LcCity = require('./src/lc-city.js')
 
 var baseInput = document.getElementById('base')
 var defaultInput = document.getElementById('default')
