@@ -41,7 +41,7 @@ export default {
     const html = el.ownerDocument.documentElement;
     let box = { top: 0, left: 0 };
 
-    if ( typeof el.getBoundingClientRect !== 'undefined' ) {
+    if (typeof el.getBoundingClientRect !== 'undefined') {
       box = el.getBoundingClientRect();
     }
 
@@ -58,10 +58,10 @@ export default {
       xScroll = window.innerWidth + window.scrollMaxX;
       yScroll = window.innerHeight + window.scrollMaxY;
     } else {
-      if (document.body.scrollHeight > document.body.offsetHeight) { 
+      if (document.body.scrollHeight > document.body.offsetHeight) {
         xScroll = document.body.scrollWidth;
         yScroll = document.body.scrollHeight;
-      } else { 
+      } else {
         xScroll = document.body.offsetWidth;
         yScroll = document.body.offsetHeight;
       }
@@ -69,7 +69,7 @@ export default {
 
     let windowWidth, windowHeight;
 
-    if (self.innerHeight) { 
+    if (self.innerHeight) {
       if (document.documentElement.clientWidth) {
         windowWidth = document.documentElement.clientWidth;
       } else {
@@ -95,7 +95,7 @@ export default {
     } else {
       pageHeight = yScroll;
     }
-   
+
     if (xScroll < windowWidth) {
       pageWidth = xScroll;
     } else {

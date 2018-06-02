@@ -2,7 +2,7 @@
   "name": "province-select",
   "version": "1.0.0",
   "description": "省市区选择",
-  "main": "index.js",
+  "main": "./src/lc-city.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
