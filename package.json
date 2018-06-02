@@ -1,0 +1,19 @@
+{
+  "name": "province-select",
+  "version": "1.0.0",
+  "description": "省市区选择",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiexieni1992/province-select.git"
+  },
+  "author": "2272408208@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiexieni1992/province-select/issues"
+  },
+  "homepage": "https://github.com/xiexieni1992/province-select#readme"
+}
