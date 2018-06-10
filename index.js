@@ -1,10 +1,10 @@
 import LcCity from './src/lc-city.js'
 import address from './src/address.json'
 
-var baseInput = document.getElementById('base')
-var defaultInput = document.getElementById('default')
+const baseInput = document.getElementById('base')
+const defaultInput = document.getElementById('default')
 
-var baseCity = new LcCity({
+const baseCity = new LcCity({
   json: address,
   confirm: (data) => {
     baseInput.value = `${data.province}-${data.city}-${data.district}`
@@ -16,7 +16,7 @@ baseInput.addEventListener('click', () => {
 })
 
 // 有默认选项，进行回填
-var defaultCity = new LcCity({
+const defaultCity = new LcCity({
   json: address,
   data: {
     province: '广东省',
