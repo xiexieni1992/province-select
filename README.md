@@ -22,6 +22,7 @@ npm安装或者cnpm：
 
         import PsCity from 'province-selector';
         var City = new PsCity({
+            json: addressData,
             confirm: function (data) {
                 console.log(data);  // data就是选中的地区，一个拼接好的字符串
             }
@@ -36,6 +37,7 @@ npm安装或者cnpm：
  
         import PsCity from 'province-selector';
         var City = new PsCity({
+            json: addressData,
             data: {
                 province: ' 广东省',
                 city    : '深圳市',
@@ -47,13 +49,38 @@ npm安装或者cnpm：
 ## 参数 ##
 | 参数          |     类型  |   说明                        |  默认值 |
 | :--------:    | :-----:   | :----:                        | :----:  |
-| data          | Object    | 需要回填的数据                |   空    |
-| confirm       | Function  | 触发确定按钮，返回选中的地区  |   空    |
-| cancel        | Function  | 触发取消按钮，没有返回值      |   空    |
+| data          | Object    | 需要回填的数据                |   NULL    |
+| confirm       | Function  | 触发确定按钮，返回选中的地区  |   NULL    |
+| cancel        | Function  | 触发取消按钮，没有返回值      |   NULL    |
+| json          | Object    | 传入的联动数据               | NULL |
+| title         | String    | 标题                       |选择地区|
 
+ ## 联动json格式 ## 
+    {   
+        "江苏省": {
+        "常州市": [
+            "戚墅堰区",
+            "天宁区",
+            "武进区",
+            "新北区",
+            "钟楼区
+            ]
+        }
+        "a":{
+            "b":[
+                "c",
+                "d",
+                "e"
+            ]
+        }
+    }
+
+    
 ## API ##
 
  1. `show()`，打开选择器
  2. `close()`，关闭选择器
  3. `getSelect()`，获取当前选中的区域，已拼接成了一个字符串
  4. `getSelectObj()`，获取当前选中的区域，返回的是一个对象
+
+
