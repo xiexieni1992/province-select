@@ -2,8 +2,9 @@
 ---------
 ## 本地运行 ##
 `
-    npm install
-    npm run dev
+        npm install
+        
+        npm run dev
 `
 ## 安装 ##
 npm安装或者cnpm：
