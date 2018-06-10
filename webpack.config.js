@@ -25,7 +25,7 @@ module.exports = {
         test: /\.(png|jpg)$/,
         loader: 'url-loader?limit=25000'
       }
-    ],
+    ]
   },
   mode: 'development',
   devServer: {
