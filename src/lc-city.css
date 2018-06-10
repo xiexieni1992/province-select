@@ -10,7 +10,7 @@ html {
 
 .lc-city-select {
 	position: fixed;
-	top: 0;
+	top: inherit;
 	right: 0;
 	bottom: 0;
 	left: 0;
@@ -281,9 +281,9 @@ html {
 
 	.lc-city-select {
 		position: absolute;
-		width: 440px;
+		/* width: 440px; */
 		height: 440px;
-		max-width: 440px;
+		/* max-width: 440px; */
 	}
 
 	.lc-city-select .lc-city-body {
